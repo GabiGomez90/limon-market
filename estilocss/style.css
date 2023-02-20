@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #DAF7A6;
+    display: grid;
+    grid-template-columns: repeat(4 1fr);
+    grid-template-areas:
+        "header header header header"
+        "tarjetas tarjetas tarjetas categoria "
+        "tarjetas tarjetas tarjetas categoria"
+        "footer footer footer footer"
+    ;
+}
+
+header{
+    grid-area:header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    
+}
+
+.header__logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#imgCarrito{
+    width: 50px;
+    height: 50px;
+}
+
+#contenedorPaginas{
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.navCategorias{
+    background-color: black;
+    color: aquamarine;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+main{
+    grid-area:tarjetas;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#contenedorTarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.tarjeta-producto{
+    width: 250px;
+    height: 350px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 10px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.tarjeta-producto:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+aside{
+    background-color: black;
+    grid-area:categoria;
+}
+#contenedorCategorias{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer{
+    background-color: black;
+    grid-area:footer;
+    color: aquamarine;
+}
+
+
+
+
+
+
+
+
+
